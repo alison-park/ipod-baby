@@ -1,0 +1,52 @@
+<html>
+<header>
+   <title>Music Player</title>
+   <link rel="stylesheet" type="text/css" href="ipod.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</header>
+<body>
+   <div id="screen">
+     <div class="head-bar">
+      <a href="songs.html"><button class="back-button" alt="Back Button to albums list" ><i class="material-icons">arrow_back</i></button></a>
+   </div>
+
+   <img class="player-album-art" src="images/badbadnotgood.webp" alt="Currents Album Cover"/>
+   <div>
+      <p id="songname" class="player-song-name"> And That, Too</p>
+      <p class="player-song-info"><em>IV</em> - BadBadNotGood</p>
+   </div>
+   <input type="range" id="player_time" alt="range bar for song's play duration" value="0" min="0" max="180" class="time-controls">
+   <div class="time-total"> 
+      <div id="time-elapsed" class="time-elapsed" aria-label="Numeric value to show current time stamp of song">0:00</div>
+      <div class="time" aria-label="Numeric value to show total end length of song">3:00</div>
+   </div>
+
+<nav class="button-bar" >
+   <div class="player-controls">
+      <button onclick="prevSong()" alt="Previous Song Button"><i class="material-icons">skip_previous</i></button>
+      <button onclick="switchPlay()" alt="Switch Play/Pause Button"><i id="switch" class="material-icons">play_arrow</i></button>
+      <button onclick="nextSong()" alt="Next Song Button"><i class="material-icons">skip_next</i></button>
+   </div>
+</nav>
+   <div class="vl" alt="rectangle icons to show volume level">
+      <div id="vol_pic"><i class="material-icons">volume_down</i></div>
+      <div id="vl0"></div>
+      <div id="vl1"></div>
+      <div id="vl2"></div>
+      <div id="vl3"></div>
+      <div id="vl4"></div>
+      <div id="vl5"></div>
+   </div>
+   <div class="volume-rocker">
+      <button id="voldown" alt="Volume Down Button" onclick="volDown()">&mdash;</button>
+      <button id="volup" alt="Volume Up Button" onclick="volUp()">+</button>
+   </div>
+</div>
+<script src="ipod.js">
+</script>
+</body>
+</html>
+<!-- 
+* bg iphone img is 363x762px
+* iphone 'screen' is apprx 300x530 -->
